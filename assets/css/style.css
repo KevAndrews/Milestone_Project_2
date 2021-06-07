@@ -1,4 +1,28 @@
+/* Custom Code*/
 *{
     padding: 0px;
     margin: 0px;
+}
+
+/* Main body container style */
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+/* Menu container style */
+.menu-container{
+    margin: 10% auto;
+    background-color: cadetblue;
+    max-width: 350px;
+    max-height: 550px;
+}
+
+/* Menu ul style */
+.menu-list-style{
+    width: 150px;
+    height: 450px;
+    list-style-type: none;
+    margin: 0 auto;
+    padding-top: 100px;
 }
