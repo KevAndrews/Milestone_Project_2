@@ -7,8 +7,11 @@
 /* Header H1 style */
 header h1{
     text-align: center;
+    background: url("../images/header_bg.png") no-repeat center center;
+    height:100px;
     margin-top: 50px;
     margin-bottom: 25px;
+    padding-top: 65px;
 }
 
 /* Main body container style */
@@ -19,17 +22,17 @@ header h1{
 
 /* nav style */
 nav{
-    background-color: cadetblue;
-    width: 450px;
-    height: 550px;
+    background-image: url("../images/menu_bg.png");
+    width: 620px;
+    height: 510px;
 }
 
-/* Button grid style */
+/* Button grid style, Code used from https://learncssgrid.com/ */
 .btn-grid{
     display: grid;
-    grid-template-columns:  repeat(3, 150px);
+    grid-template-columns:  repeat(3, 210px);
     grid-template-rows: repeat(6, 50px);
-    grid-gap: 50px 0px;
+    grid-gap: 35px 0px;
     color: #444;
     margin: 0 auto;
 }
@@ -53,3 +56,28 @@ nav{
     grid-column: 2 / 3;
     grid-row: 5 / 5;
   }
+
+/* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr*/
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 220px;
+    height: 60px;
+    
+    background: url("../images/btn_bg.png") no-repeat center center;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s;
+    position: relative;
+  
+    text-align: center;
+    overflow: hidden;
+  
+  }
+
+button:hover {
+  transform: translateX(5px) translateY(-7px);
+}
