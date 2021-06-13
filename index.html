@@ -9,6 +9,12 @@
     <meta name="author" content="Kevin Andrews">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_PcmTDd4qFndvZ55qSJNdw");
+        })();
+    </script>
     <title>Labyrinth Of Memories - Home</title>
   </head>
 
@@ -42,17 +48,27 @@
       </div>
     </div>
 
+    <!-- Used the Form code from the Resume project -->
     <div id="modal-contact" class="w3-modal">
       <div class="w3-modal-content w3-animate-zoom">
         <div class="w3-container">
           <span id="close" class="w3-button w3-display-bottomright">&times;</span>
           <h2 class="modal-title">Contact Me</h2>
+          <section class="center-form">
+            <form onsubmit="return sendMail(this);" method="POST">
+              <input type="text" name="name" id="fullname" placeholder="Name" required/>
+              <input type="email" name="emailaddress" id="emailaddress" placeholder="Email" required/>
+              <textarea rows="5" name="projectsummary" id="projectsummary" placeholder="Project Description" required></textarea>
+              <button type="submit" class="btn">Send Email</button>
+            </form>
+          </section>
         </div>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/sendemail.js"></script>
   </body>
 
 </html>
