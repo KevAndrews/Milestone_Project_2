@@ -38,6 +38,28 @@
   display: none;
 }
 
+.w3-modal-content{
+  background-color: transparent;
+  height: 560px;
+  width: 625px;
+}
+
+.w3-button{
+  margin: 0 2% 2% 0;
+  font-size: 28px;
+}
+
+.w3-container{
+  background: url('../images/menu_title_bg.png') no-repeat center center;
+  height: 560px;
+  width: 625px;
+}
+
+.modal-title{
+  text-align: center;
+  margin-top: 30px;
+}
+
 /* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr */
 button {
     display: flex;
