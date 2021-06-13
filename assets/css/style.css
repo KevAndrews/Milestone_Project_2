@@ -4,58 +4,30 @@
     margin: 0px;
 }
 
-/* Header H1 style */
-header h1{
-    text-align: center;
-    background: url("../images/header_bg.png") no-repeat center center;
-    height:100px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    padding-top: 65px;
+/* Header style */
+.container{
+  background: url('../images/menu_title_bg.png') no-repeat;
+  height: 560px;
+  width: 625px;
+  margin: 5% auto;
 }
 
-/* Main body container style */
-.container{
-    width: 100%;
-    height: 100vh;
+/* h1 style */
+.title{
+  text-align: center;
+  padding-top: 25px;
 }
 
 /* nav style */
-nav{
-    background-image: url("../images/menu_bg.png");
-    width: 620px;
-    height: 510px;
+.nav-container{
+  width: 200px;
+  margin: 0 auto;
 }
 
-/* Button grid style, Code used from https://learncssgrid.com/ */
-.btn-grid{
-    display: grid;
-    grid-template-columns:  repeat(3, 210px);
-    grid-template-rows: repeat(6, 50px);
-    grid-gap: 35px 0px;
-    color: #444;
-    margin: 0 auto;
+/* button style */
+.btn{
+  margin-top: 50px;
 }
-
-#btn-start {
-    grid-column: 2 / 3;
-    grid-row: 2 / 2;
-  }
-
-#btn-story {
-    grid-column: 2 / 3;
-    grid-row: 3 / 3;
-  }
-  
-#btn-instruct {
-    grid-column: 2 / 3;
-    grid-row: 4 / 4;
-  }
-  
-#btn-contact {
-    grid-column: 2 / 3;
-    grid-row: 5 / 5;
-  }
 
 /* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr*/
 button {
@@ -75,9 +47,8 @@ button {
   
     text-align: center;
     overflow: hidden;
-  
-  }
+}
 
 button:hover {
-  transform: translateX(5px) translateY(-7px);
+  transform: translateX(3px) translateY(-5px);
 }
