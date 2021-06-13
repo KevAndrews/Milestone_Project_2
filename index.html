@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -9,36 +9,53 @@
     <meta name="author" content="Kevin Andrews">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/menu.js"></script>
     <title>Labyrinth Of Memories - Home</title>
-</head>
+  </head>
 
-<body>
-  <header class="container">
+  <body>
+    <header class="container">
       <h1 class="title">Labyrinth Of Memories</h1>
       <nav class="nav-container">
-        <button class="btn">Start Game</button>
-        <button class="btn">The Story</button>
-        <button class="btn">Instructions</button>
-        <button class="btn">Contact Me</button>
+        <button id="start" class="btn">Start Game</button>
+        <button id="story" class="btn">The Story</button>
+        <button id="Instruc" class="btn">Instructions</button>
+        <button id="contact" class="btn">Contact Me</button>
       </nav>
-  </header>
+    </header>
 
-  <!-- Trigger/Open the Modal -->
-<button onclick="document.getElementById('id01').style.display='block'"
-class="w3-button">Open Modal</button>
-
-<!-- The Modal -->
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-      <p>Some text in the Modal..</p>
-      <p>Some text in the Modal..</p>
+    <!-- Used the W3Schools Modal from https://www.w3schools.com/w3css/w3css_modal.asp -->
+    <div id="modal-story" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container">
+          <span id="close" class="w3-button w3-display-topright">&times;</span>
+          <p>Some text in the Modal..</p>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</body>
+
+    <div id="modal-Instruc" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container">
+          <span id="close" class="w3-button w3-display-topright">&times;</span>
+          <p>Some text in the Modal..</p>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-contact" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container">
+          <span id="close" class="w3-button w3-display-topright">&times;</span>
+          <p>Some text in the Modal..</p>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/menu.js"></script>
+  </body>
 
 </html>

@@ -1,10 +1,10 @@
-/* Custom Code*/
+/* Custom Code */
 *{
     padding: 0px;
     margin: 0px;
 }
 
-/* Header style */
+/* Custom Code Header style */
 .container{
   background: url('../images/menu_title_bg.png') no-repeat;
   height: 560px;
@@ -12,24 +12,33 @@
   margin: 5% auto;
 }
 
-/* h1 style */
+/* Custom Code h1 style */
 .title{
   text-align: center;
   padding-top: 25px;
 }
 
-/* nav style */
+/* Custom Code nav style */
 .nav-container{
   width: 200px;
   margin: 0 auto;
 }
 
-/* button style */
+/* Custom Code button style */
 .btn{
   margin-top: 50px;
 }
 
-/* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr*/
+/* Custom Code modal style */
+.display-modal{
+  display: block;
+}
+
+.hide-modal{
+  display: none;
+}
+
+/* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr */
 button {
     display: flex;
     justify-content: center;
