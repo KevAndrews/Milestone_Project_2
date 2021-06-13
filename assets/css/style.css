@@ -1,4 +1,85 @@
+/* Custom Code */
 *{
     padding: 0px;
     margin: 0px;
+}
+
+/* Custom Code Header style */
+.container{
+  background: url('../images/menu_title_bg.png') no-repeat;
+  height: 560px;
+  width: 625px;
+  margin: 5% auto;
+}
+
+/* Custom Code h1 style */
+.title{
+  text-align: center;
+  padding-top: 25px;
+}
+
+/* Custom Code nav style */
+.nav-container{
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* Custom Code button style */
+.btn{
+  margin-top: 50px;
+}
+
+/* Custom Code modal style */
+.display-modal{
+  display: block;
+}
+
+.hide-modal{
+  display: none;
+}
+
+.w3-modal-content{
+  background-color: transparent;
+  height: 560px;
+  width: 625px;
+}
+
+.w3-button{
+  margin: 0 2% 2% 0;
+  font-size: 28px;
+}
+
+.w3-container{
+  background: url('../images/menu_title_bg.png') no-repeat center center;
+  height: 560px;
+  width: 625px;
+}
+
+.modal-title{
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr */
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 220px;
+    height: 60px;
+    
+    background: url("../images/btn_bg.png") no-repeat center center;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s;
+    position: relative;
+  
+    text-align: center;
+    overflow: hidden;
+}
+
+button:hover {
+  transform: translateX(3px) translateY(-5px);
 }

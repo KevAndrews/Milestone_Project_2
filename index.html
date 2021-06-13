@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Kevin Andrews">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <title></title>
-</head>
+    <title>Labyrinth Of Memories - Home</title>
+  </head>
 
-<body>
+  <body>
+    <header class="container">
+      <h1 class="title">Labyrinth Of Memories</h1>
+      <nav class="nav-container">
+        <button id="start" class="btn">Start Game</button>
+        <button id="story" class="btn">The Story</button>
+        <button id="Instruc" class="btn">Instructions</button>
+        <button id="contact" class="btn">Contact Me</button>
+      </nav>
+    </header>
 
-</body>
+    <!-- Used the W3Schools Modal from https://www.w3schools.com/w3css/w3css_modal.asp -->
+    <div id="modal-story" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container">
+          <span id="close" class="w3-button w3-display-bottomright">&times;</span>
+          <h2 class="modal-title">Story</h2>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-Instruc" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container">
+          <span id="close" class="w3-button w3-display-bottomright">&times;</span>
+          <h2 class="modal-title">Instructions</h2>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-contact" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container">
+          <span id="close" class="w3-button w3-display-bottomright">&times;</span>
+          <h2 class="modal-title">Contact Me</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/menu.js"></script>
+  </body>
 
 </html>

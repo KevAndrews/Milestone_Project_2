@@ -93,7 +93,7 @@ The GitHub Repository can be cloned in the following way:
 7.	Pressing Enter to create the local clone.
 
 <h1>Credits</h1>
-
+https://freefrontend.com/css-buttons/ - https://codepen.io/sowmyaseshadri/pen/LYRjGpr
 
 <h1>Content</h1>
 
