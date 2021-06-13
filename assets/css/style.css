@@ -60,6 +60,25 @@
   margin-top: 30px;
 }
 
+/* Custom code contact form style */
+.center-form{
+  width:350px;
+  margin: 25px auto;
+}
+
+.center-form input[type=text],[type=email],textarea{
+  width: 100%;
+  margin-top: 45px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: black;
+}
+
+.center-form button{
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
 /* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr */
 button {
     display: flex;
