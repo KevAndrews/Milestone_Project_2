@@ -79,6 +79,15 @@
   margin-top: 45px;
 }
 
+/* Custom code Story Modal style */
+.story-block{
+  padding: 30px;
+}
+
+.story-block p{
+  padding-top: 15px;
+}
+
 /* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr */
 button {
     display: flex;
