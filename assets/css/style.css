@@ -111,3 +111,23 @@ button {
 button:hover {
   transform: translateX(3px) translateY(-5px);
 }
+
+#game-world{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.game-tile{
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  float: left;
+}
+
+.green-div{
+  background-color: chartreuse;
+}
+
+.red-div{
+  background-color: red;
+}
