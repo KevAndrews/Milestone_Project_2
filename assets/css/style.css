@@ -112,7 +112,17 @@ button:hover {
   transform: translateX(3px) translateY(-5px);
 }
 
+.game-container{
+  width: 100%;
+}
+
 #game-world{
+  max-width: 400px;
+  height: 450px;
+  margin: 0 auto;
+}
+
+#game-state{
   max-width: 400px;
   margin: 0 auto;
 }

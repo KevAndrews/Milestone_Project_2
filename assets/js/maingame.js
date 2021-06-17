@@ -1,10 +1,19 @@
+/* Custom Code */
+$(document).ready(function() {
+    loadMap();
+
+    $(".green-div").click(function() {
+        alert("Div");
+    });
+});
+
 function loadMap(){
     let map = [
         [1,1,1,1,1,1,1],
         [1,0,0,0,0,0,1],
-        [1,0,0,2,0,0,1],
+        [1,0,1,1,1,0,1],
         [1,0,0,0,0,0,1],
-        [1,0,0,0,0,0,1]
+        [1,1,1,1,1,1,1]
     ];
 
     document.getElementById('game-world').innerHTML = "";
@@ -18,4 +27,8 @@ function loadMap(){
         } 
       }
     }
+}
+
+function checkTile(){
+
 }
