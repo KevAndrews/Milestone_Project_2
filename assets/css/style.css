@@ -141,3 +141,11 @@ button:hover {
 .red-div{
   background-color: red;
 }
+
+.player-div{
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin: 10px auto;
+  background-color: black;
+}
