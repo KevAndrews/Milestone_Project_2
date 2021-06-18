@@ -1,14 +1,12 @@
 /* Custom Code */
 $(document).ready(function() {
-    
     runGame();
-
 });
 
 function runGame(){
     //set game world parameters
     let level = 1;
-    let score = 0;
+    
     //Load Map/level
     loadLevel(level);
     
@@ -18,9 +16,16 @@ function runGame(){
 
     $(".blue-div").click(function() {
         if(canMove(this)){
-            endLevel(level);
-            alert(endLevelScore());
+            endLevelScore();
         }
+    });
+
+    $("#restart").click(function() {
+        loadLevel(level);
+    });
+
+    $("#menu").click(function() {
+        returnToMenu();
     });
 
 }
@@ -36,15 +41,11 @@ function endLevelScore(){
 
     let levelScore = (oldScore * 10) + (finishTime * 10);
 
-    return levelScore;
-}
-
-function restartLevel(){
-
+    $("#score").html(levelScore);
 }
 
 function returnToMenu(){
-
+    window.location.href = "index.html";
 }
 
 /*
@@ -109,24 +110,28 @@ function canMove(selectedDiv){
             $(selectedDiv).prevAll().eq(6).children().remove();
             $(selectedDiv).prevAll().eq(6).removeClass("green-div");
             $(selectedDiv).html('<div class="player-div"></div>');
+            incrementScore();
         }
         //Down
         if($(selectedDiv).nextAll().eq(6).children().hasClass("player-div")){
             $(selectedDiv).nextAll().eq(6).children().remove();
             $(selectedDiv).nextAll().eq(6).removeClass("green-div");
             $(selectedDiv).html('<div class="player-div"></div>');
+            incrementScore();
         }
         //left
         if($(selectedDiv).prev().children().hasClass("player-div")){
             $(selectedDiv).prev().children().remove();
             $(selectedDiv).prev().removeClass("green-div");
             $(selectedDiv).html('<div class="player-div"></div>');
+            incrementScore();
         }
         //right
         if($(selectedDiv).next().children().hasClass("player-div")){
             $(selectedDiv).next().children().remove();
             $(selectedDiv).next().removeClass("green-div");
             $(selectedDiv).html('<div class="player-div"></div>');
+            incrementScore();
         }
     } else if($(selectedDiv).hasClass("blue-div")){
         //Check 4 dircetions
