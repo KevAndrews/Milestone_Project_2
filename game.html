@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Kevin Andrews">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <title>Labyrinth Of Memoria - Game Screen</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <section id="game-world">
+        This section will contain the game area / Map
+      </section>
+      <section id="game-state">
+        <div class="memory">
+          <p>Memory: <span id="memory">_</span></p>
+        </div>
+        <div class="level">
+          <p>Level: <span id="level">1</span></p>
+        </div>
+        <div class="time">
+          <p>Time: <span id="time">0</span></p>
+        </div>
+        <div class="score">
+          <p>Score: <span id="score">0</span></p>
+        </div>
+        <button id="restart">Restart Level</button>
+        <button id="menu">Main Menu</button>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/maingame.js"></script>
+  </body>
+
+</html>

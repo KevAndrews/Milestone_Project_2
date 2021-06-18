@@ -2,8 +2,12 @@
 $(document).ready(function() {
     let modalName = "modal-";
     $("button").click(function() {
+      if($(this).attr("id") != 'start'){
         modalName += $(this).attr("id");
         openModal(modalName);
+      } else{
+        window.location.href = "game.html";
+      } 
     });
 
     $("span").click(function() {

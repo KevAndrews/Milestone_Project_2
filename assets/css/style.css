@@ -111,3 +111,45 @@ button {
 button:hover {
   transform: translateX(3px) translateY(-5px);
 }
+
+.game-container{
+  width: 100%;
+}
+
+#game-world{
+  max-width: 400px;
+  height: 450px;
+  margin: 0 auto;
+}
+
+#game-state{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.game-tile{
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  float: left;
+}
+
+.green-div{
+  background-color: chartreuse;
+}
+
+.red-div{
+  background-color: red;
+}
+
+.blue-div{
+  background-color: blue;
+}
+
+.player-div{
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin: 10px auto;
+  background-color: black;
+}
