@@ -4,6 +4,11 @@
     margin: 0px;
 }
 
+body{
+  background: url('../images/main_bg.png') no-repeat;
+  max-width: 100%;
+}
+
 /* Custom Code Header style */
 .container{
   background: url('../images/menu_title_bg.png') no-repeat;
