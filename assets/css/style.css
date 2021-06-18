@@ -142,6 +142,10 @@ button:hover {
   background-color: red;
 }
 
+.blue-div{
+  background-color: blue;
+}
+
 .player-div{
   height: 30px;
   width: 30px;
