@@ -1,6 +1,11 @@
 /* Custom Code */
 $(document).ready(function() {
     runGame();
+
+    /* Code to fix a reload bug that disabled the click function https://www.codewall.co.uk/jquery-on-click-function-not-working-after-appending-html/ */
+    $("body").on("click", "div", function(){
+        canMove(this);
+    });
 });
 
 function runGame(){
@@ -9,10 +14,6 @@ function runGame(){
     
     //Load Map/level
     loadLevel(level);
-    
-    $(".green-div").click(function() {
-        canMove(this);
-    });
 
     $(".blue-div").click(function() {
         if(canMove(this)){
@@ -52,7 +53,7 @@ function returnToMenu(){
  Code used from:
  https://stackoverflow.com/questions/2604450/how-to-create-a-jquery-clock-timer
 */
-let elapsed_seconds = 60;
+/*let elapsed_seconds = 60;
 setInterval(function() {
   elapsed_seconds = --elapsed_seconds;
   $('#time').text(elapsed_seconds);
@@ -60,7 +61,7 @@ setInterval(function() {
       alert("Game Over");
       elapsed_seconds = 60;
   }
-}, 1000);
+}, 1000);*/
 
 // Used the JavaScript_walk_through_challenge as a template
 function incrementScore() {
