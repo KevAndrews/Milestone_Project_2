@@ -76,11 +76,12 @@ body{
 .center-form{
   width:350px;
   margin: 25px auto;
+  font-size: 16pt;
 }
 
 .center-form input[type=text],[type=email]{
   width: 100%;
-  margin-bottom: 45px;
+  margin-bottom: 15px;
   background-color: transparent;
   border: 2px solid #fff;
   color: black;
@@ -94,7 +95,7 @@ body{
 }
 
 .center-form button{
-  margin: 30px auto 0 auto;
+  margin: 10px auto 0 auto;
 }
 
 /* Code from https://www.w3schools.com/howto/howto_css_placeholder.asp*/

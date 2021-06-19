@@ -56,6 +56,7 @@ function runGame(){
     
     // Restart current level
     $("#restart").click(function() {
+        $(".game-message").removeClass("show").addClass("hide");
         loadLevel(level);
         levelScore(score); // reset the score to be the same as the start of the level
     });
@@ -307,17 +308,18 @@ function openModal(level, totalMissedMemories){
     populateMadal(totalMissedMemories);
 }
 
+// Close the end level Modal
 function closeModal(level){
     if($("#game-btn").text() == "Main Menu"){
         returnToMenu();
     } else{
         $("#modal-levelend").removeClass("display-modal").addClass("hide-modal");
         loadLevel(level);
-        elapsed_seconds = 60;
         refreshIntervalId = setInterval(countdown, 1000);
     } 
 }
 
+// Populate the end Modal screen
 function populateMadal(totalMissedMemories){
     $("#missed-memories").text(totalMissedMemories);
     $("#current-level").text($("#level").text());
