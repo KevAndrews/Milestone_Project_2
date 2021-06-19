@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Oswald&display=swap');
+
 /* Custom Code */
 *{
     padding: 0px;
@@ -5,6 +7,7 @@
 }
 
 body{
+  font-family: 'Oswald', sans-serif;
   background: url('../images/main_bg.png') no-repeat;
   max-width: 100%;
 }
@@ -19,8 +22,10 @@ body{
 
 /* Custom Code h1 style */
 .title{
+  font-family: 'MedievalSharp', cursive;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 30px;
+  color: white;
 }
 
 /* Custom Code nav style */
@@ -61,8 +66,10 @@ body{
 }
 
 .modal-title{
+  font-family: 'MedievalSharp', cursive;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 35px;
+  color:white;
 }
 
 /* Custom code contact form style */
@@ -71,9 +78,16 @@ body{
   margin: 25px auto;
 }
 
-.center-form input[type=text],[type=email],textarea{
+.center-form input[type=text],[type=email]{
   width: 100%;
-  margin-top: 45px;
+  margin-bottom: 45px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: black;
+}
+
+.center-form textarea{
+  width: 100%;
   background-color: transparent;
   border: 2px solid #fff;
   color: black;
@@ -84,13 +98,28 @@ body{
   margin-top: 45px;
 }
 
+/* Code from https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}
+
 /* Custom code Story Modal style */
 .story-block{
   padding: 30px;
 }
 
-.story-block p{
+.story-block > p{
   padding-top: 15px;
+  font-size: 16pt;
 }
 
 /* Use the code from https://codepen.io/sowmyaseshadri/pen/LYRjGpr */
@@ -124,14 +153,38 @@ button:hover {
 #game-world{
   max-width: 400px;
   height: 450px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
-#game-state{
-  max-width: 400px;
-  margin: 0 auto;
+footer{
+  position: absolute;
+  bottom: 0;
+  background: url('../images/game_menu.png') no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  font-size: 18pt;
 }
 
+/* Code from https://codepen.io/ann71727/pen/OJVQQeR */
+ul {
+  list-style-type: none;
+  margin: 25px 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  min-width: 5em;
+  margin: 0 0.5em;
+}
+
+/* Custom Code for the Game Stats */
+.game-stats li{
+  margin: 0 2.5em;
+}
+
+/* Custom Code for the Game layout */
 .game-tile{
   height: 50px;
   width: 50px;
