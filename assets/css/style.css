@@ -150,6 +150,12 @@ button:hover {
   width: 100%;
 }
 
+.game-message{
+  text-align: center;
+  background-color: burlywood;
+  visibility: hidden;
+}
+
 #game-world{
   max-width: 400px;
   height: 450px;
@@ -192,15 +198,15 @@ ul li {
   float: left;
 }
 
-.green-div{
+.ground-div{
   background-color: chartreuse;
 }
 
-.red-div{
+.tree-div{
   background-color: red;
 }
 
-.blue-div{
+.end-div{
   background-color: blue;
 }
 
