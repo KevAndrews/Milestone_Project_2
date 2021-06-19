@@ -6,7 +6,8 @@ $(document).ready(function() {
 function runGame(){
     //set game world parameters
     let level = 1;
-    
+    let score = 0;
+
     //Load Map/level
     loadLevel(level);
 
@@ -15,13 +16,16 @@ function runGame(){
         https://www.codewall.co.uk/jquery-on-click-function-not-working-after-appending-html/ 
     */
     $("body").on("click", "div", function(){
-        if(movePlayer(this)){
+        
+        if($(this).children().hasClass("enemy-div") && movePlayer(this)){
+            incrementScore(10);
+        } else if(movePlayer(this)){
             if($(this).hasClass("end-div")){
-                endLevelScore();
+                score = endLevelScore();
                 level = endLevel(level);
                 loadLevel(level);
             } else{
-                incrementScore();
+                incrementScore(1);
             }
         } else{
             //Check if the player is on the current Tile, display message
@@ -35,6 +39,7 @@ function runGame(){
 
     $("#restart").click(function() {
         loadLevel(level);
+        levelScore(score); // reset the score to be the same as the start of the level
     });
 
     $("#menu").click(function() {
@@ -57,13 +62,21 @@ function endLevelScore(){
     let levelScore = oldScore + (finishTime * 10);
 
     $("#score").html(levelScore);
+
+    return levelScore;
 }
 
 // Used the JavaScript_walk_through_challenge as a template
-function incrementScore() {
+function incrementScore(points) {
 	// Gets the current score from the DOM and increments it
 	let oldScore = parseInt($("#score").text());
-	$("#score").html(++oldScore);
+    oldScore = oldScore + points;
+	$("#score").html(oldScore);
+}
+
+// Sets the score if the level is restarted
+function levelScore(score){
+    $("#score").html(score);
 }
 
 // Return player to index.html / Main Menu
@@ -85,29 +98,30 @@ setInterval(function() {
   }
 }, 1000);*/
 
+// Return a given level map
 function selectLevelMap(level){
     let lvl1 = [
         [0,0,0,0,0,0,0],
-        [0,0,0,1,1,0,0],
+        [0,0,0,1,4,0,0],
         [2,1,1,1,1,1,3],
-        [0,0,1,1,1,1,0],
+        [0,0,4,1,1,4,0],
         [0,0,0,0,0,0,0]
     ];
 
     let lvl2 = [
-        [2,1,1,1,1,1,0],
-        [0,1,0,1,1,1,0],
+        [2,1,1,1,1,4,0],
+        [0,1,0,4,1,1,0],
         [0,1,0,1,0,1,0],
-        [0,0,1,1,1,1,0],
-        [0,0,0,0,1,1,3]
+        [0,1,1,4,1,1,0],
+        [0,0,0,0,1,4,3]
     ];
 
     let lvl3 = [
+        [0,4,1,0,0,0,0],
         [0,1,1,0,0,0,0],
-        [0,1,1,0,0,0,0],
-        [2,1,1,1,1,0,0],
-        [0,0,1,1,1,1,0],
-        [0,0,1,1,0,3,0]
+        [2,1,4,4,1,0,0],
+        [0,0,1,1,1,4,0],
+        [0,0,4,1,0,3,0]
     ];
 
     if(level == 1){
@@ -125,6 +139,7 @@ function selectLevelMap(level){
     return lvl1;
 }
 
+// Build a level map
 function loadLevel(level){
     let map = selectLevelMap(level);
 
@@ -138,14 +153,16 @@ function loadLevel(level){
             $('#game-world').append('<div class="game-tile ground-div"><div class="player-div"></div></div>');
         } else if((map[i][l] == 3)){
             $('#game-world').append('<div class="game-tile end-div"></div>');
+        } else if((map[i][l] == 4)){
+            $('#game-world').append('<div class="game-tile ground-div"><div class="enemy-div"></div></div>');
         } else{
-            $('#game-world').append('<div class="game-tile tree-div"></div>');
+            $('#game-world').append('<div class="game-tile grass-div"></div>');
         } 
       }
     }
 }
 
-//Handle player move, returns true if player moved
+// Handle player move, returns true if player moved
 function movePlayer(selectedDiv){
     
     if($(selectedDiv).hasClass("ground-div")||$(selectedDiv).hasClass("end-div")){
@@ -153,28 +170,28 @@ function movePlayer(selectedDiv){
         //Up
         if($(selectedDiv).prevAll().eq(6).children().hasClass("player-div")){
             $(selectedDiv).prevAll().eq(6).children().remove();
-            $(selectedDiv).prevAll().eq(6).removeClass("ground-div");
+            $(selectedDiv).prevAll().eq(6).removeClass("ground-div").addClass("grass-div");
             $(selectedDiv).html('<div class="player-div"></div>');
             return true;
         }
         //Down
         if($(selectedDiv).nextAll().eq(6).children().hasClass("player-div")){
             $(selectedDiv).nextAll().eq(6).children().remove();
-            $(selectedDiv).nextAll().eq(6).removeClass("ground-div");
+            $(selectedDiv).nextAll().eq(6).removeClass("ground-div").addClass("grass-div");
             $(selectedDiv).html('<div class="player-div"></div>');
             return true;
         }
         //left
         if($(selectedDiv).prev().children().hasClass("player-div")){
             $(selectedDiv).prev().children().remove();
-            $(selectedDiv).prev().removeClass("ground-div");
+            $(selectedDiv).prev().removeClass("ground-div").addClass("grass-div");
             $(selectedDiv).html('<div class="player-div"></div>');
             return true;
         }
         //right
         if($(selectedDiv).next().children().hasClass("player-div")){
             $(selectedDiv).next().children().remove();
-            $(selectedDiv).next().removeClass("ground-div");
+            $(selectedDiv).next().removeClass("ground-div").addClass("grass-div");
             $(selectedDiv).html('<div class="player-div"></div>');
             return true;
         }

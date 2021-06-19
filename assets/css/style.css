@@ -199,21 +199,27 @@ ul li {
 }
 
 .ground-div{
-  background-color: chartreuse;
+  background: url('../images/ground_tile.png') no-repeat;
 }
 
-.tree-div{
-  background-color: red;
+.grass-div{
+  background: url('../images/grass_tile.png') no-repeat;
 }
 
 .end-div{
-  background-color: blue;
+  background: url('../images/end_tile.png') no-repeat;
 }
 
 .player-div{
   height: 30px;
   width: 30px;
-  border-radius: 15px;
-  margin: 10px auto;
-  background-color: black;
+  margin: 5px auto;
+  background: url('../images/player.gif') no-repeat;
+}
+
+.enemy-div{
+  height: 30px;
+  width: 30px;
+  margin: 5px auto;
+  background: url('../images/enemy.gif') no-repeat;
 }
