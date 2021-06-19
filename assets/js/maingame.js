@@ -8,6 +8,7 @@ function runGame(){
     let level = 1;
     let score = 0;
     let letter = 'a';
+    let totalMissedMemories = 0;
 
     //Load Map/level
     loadLevel(level);
@@ -17,29 +18,34 @@ function runGame(){
         https://www.codewall.co.uk/jquery-on-click-function-not-working-after-appending-html/ 
     */
     $("body").on("click", "div", function(){
-        // Check to see if the player can end the level, restart if not
-        if(!canEndLevel()){
-            $(".game-message").html("You are unable to end the level").removeClass("hide").addClass("show");
-            $("#memory").empty();   
-            loadLevel(level);
-            levelScore(score);
-        }
-        // Display message that the player is on the current tile
+    
+        // Display message if the player is on the selected tile
         if($(this).children().hasClass("player-div")){
             $(".game-message").html("You are on the current tile").removeClass("hide").addClass("show");
         }
+
         // Check for Enemy and increment score
         if($(this).children().hasClass("enemy-div") && movePlayer(this)){
             $(".game-message").removeClass("show").addClass("hide");
             letter = getMemoryLetter(level, $('.enemy-div').length);
             updateMemory(letter);
             incrementScore(10, false);
-        } else if(movePlayer(this)){
+        } 
+        
+        if(movePlayer(this)){
             $(".game-message").removeClass("show").addClass("hide");
-            if($(this).hasClass("end-div")){
+            if($(this).hasClass("end-div") && level < 8){
+                clearInterval(refreshIntervalId);
+                $("#game-btn").text("Next Level");
+                totalMissedMemories += $('.enemy-div').length;
+                openModal(level, totalMissedMemories);
                 score = incrementScore(0, true);
                 level = endLevel(level);
-                loadLevel(level);
+            } else if($(this).hasClass("end-div") && level >= 8){
+                clearInterval(refreshIntervalId);
+                $("#game-btn").text("Main Menu");
+                score = incrementScore(0, true);
+                openModal(level, totalMissedMemories);
             } else{
                 incrementScore(1, false);
             }
@@ -50,7 +56,6 @@ function runGame(){
     
     // Restart current level
     $("#restart").click(function() {
-        $("#memory").empty();
         loadLevel(level);
         levelScore(score); // reset the score to be the same as the start of the level
     });
@@ -60,7 +65,14 @@ function runGame(){
         returnToMenu();
     });
 
+    // Close Modal
+    $("#modal-levelend").click(function() {
+        closeModal(level);
+    });
+
 }
+
+/* Start Status Functions */
 
 // Increment the level
 function endLevel(level){
@@ -90,7 +102,7 @@ function incrementScore(points, endOfLevel) {
 
 // Get the next letter for the current animal on this level
 function getMemoryLetter(currentLevel, remainingEnemies){
-    let memories = ['goD','noiL','esroH','acaplA'];
+    let memories = ['goD','noiL','esroH','acaplA','hateehC','tnahpelE','elidocorC','soreconihR'];
     let memory = memories[currentLevel-1];
     let memoryLetters = memory.split('');
 
@@ -107,24 +119,34 @@ function levelScore(score){
     $("#score").html(score);
 }
 
-// Return player to index.html / Main Menu
-function returnToMenu(){
-    window.location.href = "index.html";
-}
-
 /*
     Code used from:
     https://stackoverflow.com/questions/2604450/how-to-create-a-jquery-clock-timer
 */
 let elapsed_seconds = 60;
-setInterval(function() {
-  elapsed_seconds = --elapsed_seconds;
-  $('#time').text(elapsed_seconds);
-  if(elapsed_seconds <= 0){
-      alert("Game Over");
-      elapsed_seconds = 60;
-  }
-}, 1000);
+var refreshIntervalId = setInterval(countdown, 1000);
+function countdown(){
+    elapsed_seconds = --elapsed_seconds;
+    $('#time').text(elapsed_seconds);
+    if(elapsed_seconds <= 0){
+        gameOver();
+        elapsed_seconds = 60;
+    } 
+}
+/* End Status Functions */
+
+/* Start Game / Button Functions */
+function gameOver(){
+    clearInterval(refreshIntervalId);
+    $(".modal-title").text("Game Over");
+    $("#game-btn").text("Main Menu");
+    $("#modal-levelend").removeClass("hide-modal").addClass("display-modal");
+}
+
+// Return player to index.html / Main Menu
+function returnToMenu(){
+    window.location.href = "index.html";
+}
 
 // Return a given level map
 function selectLevelMap(level){
@@ -153,59 +175,43 @@ function selectLevelMap(level){
     ];
 
     let lvl4 = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]
+        [2,0,0,0,0,0,0],
+        [1,0,1,1,4,0,0],
+        [4,1,4,0,1,0,0],
+        [0,0,4,1,4,0,0],
+        [0,0,1,1,1,4,3]
     ];
 
     let lvl5 = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]
+        [0,4,1,1,4,1,1],
+        [2,1,0,0,1,0,1],
+        [0,0,0,4,1,0,1],
+        [0,1,4,1,1,4,3],
+        [0,4,1,4,1,1,0]
     ];
 
     let lvl6 = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]
+        [1,4,1,1,1,1,1],
+        [1,0,0,4,4,0,1],
+        [2,0,1,1,0,0,3],
+        [0,4,1,1,4,1,4],
+        [0,1,4,1,0,4,1]
     ];
 
     let lvl7 = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]
+        [0,0,1,4,1,0,0],
+        [0,0,1,0,4,4,3],
+        [0,0,1,4,0,4,4],
+        [2,1,0,4,1,1,0],
+        [0,4,1,4,0,1,1]
     ];
 
     let lvl8 = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]
-    ];
-
-    let lvl9 = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]
-    ];
-
-    let lvl10 = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]
+        [0,0,0,4,4,0,0],
+        [4,2,4,1,1,1,4],
+        [1,0,1,0,0,4,4],
+        [1,4,4,1,1,3,1],
+        [0,4,1,0,0,0,0]
     ];
 
     switch (level) {
@@ -225,10 +231,6 @@ function selectLevelMap(level){
             return lvl7;
         case 8:
             return lvl8;
-        case 9:
-            return lvl9;
-        case 10:
-            return lvl10;
         default:
             return lvl1;
     }
@@ -239,6 +241,7 @@ function selectLevelMap(level){
 function loadLevel(level){
     let map = selectLevelMap(level);
 
+    $("#memory").empty();
     $('#game-world').empty();
 
     for (let i = 0; i < map.length; i++) {
@@ -296,24 +299,29 @@ function movePlayer(selectedDiv){
     return false;
 }
 
-// Check if the player can reach the end-div
-function canEndLevel(){
-    //Up
-    if($(".end-div").prevAll().eq(6).hasClass("ground-div")){
-        return true;
-    }
-    //Down
-    if($(".end-div").nextAll().eq(6).hasClass("ground-div")){
-        return true;
-    }
-    //left
-    if($(".end-div").prev().hasClass("ground-div")){
-        return true;
-    }
-    //right
-    if($(".end-div").next().hasClass("ground-div")){
-        return true;
-    }
-
-    return false;
+/* Used JQuery_Method_Chaining___Challenge_1 as a template */
+function openModal(level, totalMissedMemories){
+    clearInterval(refreshIntervalId);
+    $(".modal-title").text("Level " + level + " Completed");
+    $("#modal-levelend").removeClass("hide-modal").addClass("display-modal");
+    populateMadal(totalMissedMemories);
 }
+
+function closeModal(level){
+    if($("#game-btn").text() == "Main Menu"){
+        returnToMenu();
+    } else{
+        $("#modal-levelend").removeClass("display-modal").addClass("hide-modal");
+        loadLevel(level);
+        elapsed_seconds = 60;
+        refreshIntervalId = setInterval(countdown, 1000);
+    } 
+}
+
+function populateMadal(totalMissedMemories){
+    $("#missed-memories").text(totalMissedMemories);
+    $("#current-level").text($("#level").text());
+    $("#remaining-time").text($("#time").text());
+    $("#current-score").text($("#score").text());
+}
+/* End Game / Button Functions */
