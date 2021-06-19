@@ -69,9 +69,12 @@
           <h2 class="modal-title">Contact Me</h2>
           <section class="center-form">
             <form onsubmit="return sendMail(this);" method="POST">
+              <label for="fullname">Name:</label>
               <input type="text" name="name" id="fullname" placeholder="Name" required/>
+              <label for="emailaddress">Email:</label>
               <input type="email" name="emailaddress" id="emailaddress" placeholder="Email" required/>
-              <textarea rows="5" name="projectsummary" id="projectsummary" placeholder="Project Description" required></textarea>
+              <label for="message">Message:</label>
+              <textarea rows="5" name="message" id="message" placeholder="Message" required></textarea>
               <button type="submit" class="btn">Send Email</button>
             </form>
           </section>
