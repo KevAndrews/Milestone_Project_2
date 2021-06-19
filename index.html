@@ -7,10 +7,11 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Kevin Andrews">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
         (function() {
             emailjs.init("user_PcmTDd4qFndvZ55qSJNdw");
         })();
@@ -24,7 +25,7 @@
       <nav class="nav-container">
         <button id="start" class="btn">Start Game</button>
         <button id="story" class="btn">The Story</button>
-        <button id="Instruc" class="btn">Instructions</button>
+        <button id="instruc" class="btn">Instructions</button>
         <button id="contact" class="btn">Contact Me</button>
       </nav>
     </header>
@@ -33,30 +34,38 @@
     <div id="modal-story" class="w3-modal">
       <div class="w3-modal-content w3-animate-zoom">
         <div class="w3-container">
-          <span id="close" class="w3-button w3-display-bottomright">&times;</span>
+          <span class="w3-button w3-display-bottomright close">&times;</span>
           <h2 class="modal-title">Welcome to the world of Memoria</h2>
           <section class="story-block">
             <p>
               Long before the world can remember labyrinths and mazes appeared around the world.
               Brave souls ventured forth to see what lay within these mysterious places.
-              It was subtle at first people began to forget the names and other words of our world.
+              It was subtle at first, people began to forget the names and other words of our world.
               We soon found to our dismay that when someone was lost to these places a word, a name was lost with them.
               But not all was lost, we found by defeating the ceatures of these place we would regain what was once lost to us.
             </p>
             <p>
-              As part of Memoria's Labyrinth Guard you are tasked we clearing out the labyrinth of animals.
-              It got it's name due to killing the ceatures there would return the names of the animals of our world to us.
+              As part of Memoria's Labyrinth Guard you are tasked with clearing out the labyrinth of animals.
+              By killing the ceatures here we can return the names of the animals of our world to us.
             </p>
           </section>
         </div>
       </div>
     </div>
 
-    <div id="modal-Instruc" class="w3-modal">
+    <div id="modal-instruc" class="w3-modal">
       <div class="w3-modal-content w3-animate-zoom">
         <div class="w3-container">
-          <span id="close" class="w3-button w3-display-bottomright">&times;</span>
+          <span class="w3-button w3-display-bottomright close">&times;</span>
           <h2 class="modal-title">Instructions</h2>
+          <section class="story-block">
+            <p>
+              You have <strong>60</strong> seconds to complete the Game.<br/><br/>
+              You can <strong>move by left-clicking</strong> any adjacent tile but <strong>you cannot move diagonally</strong>.<br/><br/>
+              You can <strong>increase your score</strong> by collecting memories from the enemies scattered throughout the level.<br/><br/>
+              Let me know if you find all the memories scattered throughout the game by emailing me using the <strong>Contact Me</strong> button on the main menu.
+            </p>
+          </section>
         </div>
       </div>
     </div>
@@ -65,7 +74,7 @@
     <div id="modal-contact" class="w3-modal">
       <div class="w3-modal-content w3-animate-zoom">
         <div class="w3-container">
-          <span id="close" class="w3-button w3-display-bottomright">&times;</span>
+          <span class="w3-button w3-display-bottomright close">&times;</span>
           <h2 class="modal-title">Contact Me</h2>
           <section class="center-form">
             <form onsubmit="return sendMail(this);" method="POST">

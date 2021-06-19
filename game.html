@@ -7,18 +7,35 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Kevin Andrews">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Labyrinth Of Memoria - Game Screen</title>
   </head>
   <body>
     <div class="game-container">
+      <h2 class="game-message hide">Game message</h2>
       <section id="game-world">
         This section will contain the game area / Map
       </section>
     </div>
+    <div id="modal-levelend" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container">
+          <h2 class="modal-title">Level #</h2>
+          <div class="end-level">
+            <p>Missed Memories: <span id="missed-memories"></span></p>
+            <p>Level: <span id="current-level">1</span></p>
+            <p>Remaining Time: <span id="remaining-time">0</span></p>
+            <p>Score: <span id="current-score">0</span></p>
+          </div>
+          <button id="game-btn" class="btn">Next Level</button>
+        </div>
+      </div>
+    </div>
     <footer class="grid-container">
         <ul class="game-stats">
-          <li>Memory: <span id="memory">_ _ _</span></li>
+          <li>Memory: <span id="memory"></span></li>
           <li>Level: <span id="level">1</span></li>
           <li>Time: <span id="time">0</span></li>
           <li>Score: <span id="score">0</span></li>
