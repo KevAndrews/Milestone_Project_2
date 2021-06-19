@@ -7,6 +7,7 @@ function runGame(){
     //set game world parameters
     let level = 1;
     let score = 0;
+    let letter = 'a';
 
     //Load Map/level
     loadLevel(level);
@@ -16,32 +17,45 @@ function runGame(){
         https://www.codewall.co.uk/jquery-on-click-function-not-working-after-appending-html/ 
     */
     $("body").on("click", "div", function(){
-        
+        // Check to see if the player can end the level, restart if not
+        if(!canEndLevel()){
+            $(".game-message").html("You are unable to end the level").removeClass("hide").addClass("show");
+            $("#memory").empty();   
+            loadLevel(level);
+            levelScore(score);
+        }
+        // Display message that the player is on the current tile
+        if($(this).children().hasClass("player-div")){
+            $(".game-message").html("You are on the current tile").removeClass("hide").addClass("show");
+        }
+        // Check for Enemy and increment score
         if($(this).children().hasClass("enemy-div") && movePlayer(this)){
-            incrementScore(10);
+            $(".game-message").removeClass("show").addClass("hide");
+            letter = getMemoryLetter(level, $('.enemy-div').length);
+            updateMemory(letter);
+            incrementScore(10, false);
         } else if(movePlayer(this)){
+            $(".game-message").removeClass("show").addClass("hide");
             if($(this).hasClass("end-div")){
-                score = endLevelScore();
+                score = incrementScore(0, true);
                 level = endLevel(level);
                 loadLevel(level);
             } else{
-                incrementScore(1);
+                incrementScore(1, false);
             }
         } else{
-            //Check if the player is on the current Tile, display message
-            if($(this).children().hasClass("player-div")){
-                $(".game-message").html("You are on the current tile").css("visibility","visible");
-            } else{
-                $(".game-message").css("visibility","hidden");
-            }
+            
         } 
     });
-
+    
+    // Restart current level
     $("#restart").click(function() {
+        $("#memory").empty();
         loadLevel(level);
         levelScore(score); // reset the score to be the same as the start of the level
     });
-
+    
+    // Return to Main Menu
     $("#menu").click(function() {
         returnToMenu();
     });
@@ -50,28 +64,42 @@ function runGame(){
 
 // Increment the level
 function endLevel(level){
+    $("#memory").empty();
 	$("#level").html(++level);
     return level;
 }
 
-// Calculate the Score at the end of the level
-function endLevelScore(){
-    let oldScore = parseInt($("#score").text());
-	let finishTime = parseInt($("#time").text());
-
+// Used the JavaScript_walk_through_challenge as a template
+function incrementScore(points, endOfLevel) {
+    // Gets the current score from the DOM and increments it
+	let oldScore = parseInt($("#score").text());
+    // Calculate the Score at the end of the level
+    let finishTime = parseInt($("#time").text());
     let levelScore = oldScore + (finishTime * 10);
 
-    $("#score").html(levelScore);
-
-    return levelScore;
+    if(!endOfLevel){
+        oldScore = oldScore + points;
+        $("#score").html(oldScore);
+        return oldScore;
+    } else{
+        $("#score").html(levelScore);
+        return levelScore;
+    }
+    
 }
 
-// Used the JavaScript_walk_through_challenge as a template
-function incrementScore(points) {
-	// Gets the current score from the DOM and increments it
-	let oldScore = parseInt($("#score").text());
-    oldScore = oldScore + points;
-	$("#score").html(oldScore);
+// Get the next letter for the current animal on this level
+function getMemoryLetter(currentLevel, remainingEnemies){
+    let memories = ['goD','noiL','esroH','acaplA'];
+    let memory = memories[currentLevel-1];
+    let memoryLetters = memory.split('');
+
+    return memoryLetters[remainingEnemies];
+}
+
+// Set memory id
+function updateMemory(letter){
+    $("#memory").append(letter);
 }
 
 // Sets the score if the level is restarted
@@ -88,7 +116,7 @@ function returnToMenu(){
     Code used from:
     https://stackoverflow.com/questions/2604450/how-to-create-a-jquery-clock-timer
 */
-/*let elapsed_seconds = 60;
+let elapsed_seconds = 60;
 setInterval(function() {
   elapsed_seconds = --elapsed_seconds;
   $('#time').text(elapsed_seconds);
@@ -96,7 +124,7 @@ setInterval(function() {
       alert("Game Over");
       elapsed_seconds = 60;
   }
-}, 1000);*/
+}, 1000);
 
 // Return a given level map
 function selectLevelMap(level){
@@ -124,19 +152,87 @@ function selectLevelMap(level){
         [0,0,4,1,0,3,0]
     ];
 
-    if(level == 1){
-        return lvl1;
+    let lvl4 = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ];
+
+    let lvl5 = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ];
+
+    let lvl6 = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ];
+
+    let lvl7 = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ];
+
+    let lvl8 = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ];
+
+    let lvl9 = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ];
+
+    let lvl10 = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ];
+
+    switch (level) {
+        case 1:
+            return lvl1;
+        case 2:
+            return lvl2;
+        case 3:
+            return lvl3;
+        case 4:
+            return lvl4;
+        case 5:
+            return lvl5;
+        case 6:
+            return lvl6;
+        case 7:
+            return lvl7;
+        case 8:
+            return lvl8;
+        case 9:
+            return lvl9;
+        case 10:
+            return lvl10;
+        default:
+            return lvl1;
     }
 
-    if(level == 2){
-        return lvl2;
-    }
-
-    if(level == 3){
-        return lvl3;
-    }
-
-    return lvl1;
 }
 
 // Build a level map
@@ -195,6 +291,28 @@ function movePlayer(selectedDiv){
             $(selectedDiv).html('<div class="player-div"></div>');
             return true;
         }
+    }
+
+    return false;
+}
+
+// Check if the player can reach the end-div
+function canEndLevel(){
+    //Up
+    if($(".end-div").prevAll().eq(6).hasClass("ground-div")){
+        return true;
+    }
+    //Down
+    if($(".end-div").nextAll().eq(6).hasClass("ground-div")){
+        return true;
+    }
+    //left
+    if($(".end-div").prev().hasClass("ground-div")){
+        return true;
+    }
+    //right
+    if($(".end-div").next().hasClass("ground-div")){
+        return true;
     }
 
     return false;

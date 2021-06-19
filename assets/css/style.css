@@ -153,6 +153,13 @@ button:hover {
 .game-message{
   text-align: center;
   background-color: burlywood;
+}
+
+.show{
+  visibility: visible;
+}
+
+.hide{
   visibility: hidden;
 }
 
