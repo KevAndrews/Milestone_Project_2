@@ -72,6 +72,16 @@ Labyrinth Of Memoria is a Tile-based click adventure game where players need to 
 
 ## Features
 
+-   Responsive on all device sizes from 768x1024px and up.
+
+-   Toggle audio on and off.
+
+-   Modals display menu information for ease of access.
+
+-   Option to return to main menu at any point.
+
+-   Click to move player.
+
 ## Technologies Used
 
 ### Languages Used
@@ -101,10 +111,14 @@ Labyrinth Of Memoria is a Tile-based click adventure game where players need to 
 [You can find testing here!](https://github.com/KevAndrews/Milestone_Project_2/blob/main/TESTING.md)
 
 ### Bugs & Fixes
-
+-   Audio would not play using shorten URL's, I found that you needed to use the full URL path to have the audio work correctly.
+-   When you reloaded the game HTML you could no longer click to move, this was due to the Event listener been removed when you reloaded the game, to fix this I used the .on() event to re-add the click event to the div's.
+-   When you moved from tile to tile you were able to move backwards when through the class was remove, this was fixed using the reload bug fix as the DOM was not being read correctly after updating the div class.
 
 ### Project changes from Wireframe to Development
-
+-   From the original Wireframes there was no plan to add a contact page but I decided to add one to demo the use of an email API.
+-   I wanted to design the game to be mobile friendly however due to outside issues I was unable to implement this part of the project, all my CSS is made to be as response as possible.
+-   I wanted to add a simple player / enemy status screen in the game but ultimately decided against this as I felt it would not add must to the overall game.
 
 ### Known Issues
 
@@ -146,7 +160,7 @@ The GitHub Repository can be cloned in the following way:
 6.	https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/
 
 <h1>Content</h1>
-
+The audio and images belong to documented third parties noted in Credits section above, all other content was written by the developer.
 
 <h1>Acknowledgements</h1>
 I would like to thank the team at the Code Institute for all the courses they provided that help me gain the knowledge I needed to build this game.
