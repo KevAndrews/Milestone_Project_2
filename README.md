@@ -87,12 +87,12 @@ From the structure above I was able to generate the below Wireframes for the sit
         -   The UI graphics were from the following [Humble Bundle](https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/), I used the btn_bg, menu_title_bg, header_bg and game_menu.
         -   The game tiles and character graphics were from the following [itch.io](https://0x72.itch.io/dungeontileset-ii) and [Open Game Art](https://lpc.opengameart.org/static/lpc-style-guide/assets.html#outdoors), I used the player, enemy, ground_tile and end_tile from the first link and I used teh grass_tile from the second link.
         -   The background image is from [itch.io](https://free-game-assets.itch.io/free-cartoon-forest-2d-backgrounds).
+        -   I put all images through [Tinypng](https://tinypng.com/) to reduce their size.
     
-    - #### Audio
-        -   The audio for the main menu is from [Humble Bundle](https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/).
-
     ![Reductions on images](images/tinypng.png)
 
+    - #### Audio
+        -   The audio for the main menu is from [Humble Bundle](https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/).
 
 ## Features
 
