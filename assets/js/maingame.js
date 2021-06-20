@@ -9,7 +9,7 @@ function runGame(){
     let score = 0;
     let letter = 'a';
     let totalMissedMemories = 0;
-    let sfx = new sound("http://127.0.0.1:5500/assets/audio/end_level.mp3");
+    let sfx = new sound("https://kevandrews.github.io/Milestone_Project_2/assets/audio/end_level.mp3");
 
     //Load Map/level
     loadLevel(level);
@@ -27,7 +27,7 @@ function runGame(){
 
         // Check for Enemy and increment score
         if($(this).children().hasClass("enemy-div") && movePlayer(this)){
-            sfx = new sound("http://127.0.0.1:5500/assets/audio/hit.mp3");
+            sfx = new sound("https://kevandrews.github.io/Milestone_Project_2/assets/audio/hit.mp3");
             sfx.play();
             $(".game-message").removeClass("show").addClass("hide");
             letter = getMemoryLetter(level, $('.enemy-div').length);
@@ -36,7 +36,7 @@ function runGame(){
         } 
         
         if(movePlayer(this)){
-            sfx = new sound("http://127.0.0.1:5500/assets/audio/end_level.mp3");
+            sfx = new sound("https://kevandrews.github.io/Milestone_Project_2/assets/audio/end_level.mp3");
             $(".game-message").removeClass("show").addClass("hide");
             if($(this).hasClass("end-div") && level < 8){
                 sfx.play();
@@ -53,7 +53,7 @@ function runGame(){
                 score = incrementScore(0, true);
                 openModal(level, totalMissedMemories);
             } else{
-                sfx = new sound("http://127.0.0.1:5500/assets/audio/walk.mp3");
+                sfx = new sound("https://kevandrews.github.io/Milestone_Project_2/assets/audio/walk.mp3");
                 sfx.play();
                 incrementScore(1, false);
             }
