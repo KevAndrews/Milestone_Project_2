@@ -24,35 +24,35 @@ Interactive Frontend Development Milestone Project
 
 ### Wireframes
 
--   #### Balsamiq - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/MS2_Wireframes.bmpr)
+-   #### Balsamiq - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/MS2_Wireframes.bmpr)
 
 -   #### Desktop
-    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Menu%20View.png)
+    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/desktop/Desktop%20Menu%20View.png)
     
-    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Lore%20View.png)
+    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/desktop/Desktop%20Lore%20View.png)
     
-    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Instruction%20View.png)
+    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/desktop/Desktop%20Instruction%20View.png)
     
-    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Game%20View.png)
+    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/desktop/Desktop%20Game%20View.png)
 
 -   #### Tablet
-    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Menu%20View.png)
+    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/tablet/Tablet%20Menu%20View.png)
     
-    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Lore%20View.png)
+    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/tablet/Tablet%20Lore%20View.png)
     
-    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Instruction%20View.png)
+    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/tablet/Tablet%20Instruction%20View.png)
     
-    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Game%20View.png)
+    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/tablet/Tablet%20Game%20View.png)
 
 -   #### Mobile
 
-    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Menu%20View.png)
+    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/mobile/Mobile%20Menu%20View.png)
     
-    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Lore%20View.png)
+    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/mobile/Mobile%20Lore%20View.png)
     
-    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Instruction%20View.png)
+    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/mobile/Mobile%20Instruction%20View.png)
     
-    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Game%20View.png)
+    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/Wireframes/mobile/Mobile%20Game%20View.png)
 
 
 ## Surface Plane
