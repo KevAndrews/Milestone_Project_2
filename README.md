@@ -99,6 +99,9 @@ From the structure above I was able to generate the below Wireframes for the sit
 
     - #### Audio
         -   The audio for the main menu is from [Humble Bundle](https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/).
+        -   The audio for the end of level is from [Humble Bundle](https://www.gamedevmarket.net/asset/interface-sfx-9059/).
+        -   The audio for hitting an enemy is from [opengameart](https://opengameart.org/content/punch-slap-n-kick). 
+        -   The audio for walking is from [opengameart](https://opengameart.org/content/grass-foot-step-sounds-yo-frankie).
 
 ## Features
 
@@ -192,6 +195,9 @@ The GitHub Repository can be cloned in the following way:
 4.	https://0x72.itch.io/dungeontileset-ii
 5.	https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/
 6.	https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/
+7.  https://opengameart.org/content/grass-foot-step-sounds-yo-frankie => walk sound
+8.  https://www.gamedevmarket.net/asset/interface-sfx-9059/ => end leve; sound
+9.  https://opengameart.org/content/punch-slap-n-kick => Hit sound
 
 <h1>Content</h1>
 The audio and images belong to documented third parties noted in Credits section above, all other content was written by the developer.
