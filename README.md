@@ -24,13 +24,35 @@ Interactive Frontend Development Milestone Project
 
 ### Wireframes
 
--   #### Balsamiq - [View]()
+-   #### Balsamiq - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/MS2_Wireframes.bmpr)
 
 -   #### Desktop
+    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Menu%20View.png)
+    
+    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Lore%20View.png)
+    
+    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Instruction%20View.png)
+    
+    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/desktop/Desktop%20Game%20View.png)
 
 -   #### Tablet
+    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Menu%20View.png)
+    
+    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Lore%20View.png)
+    
+    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Instruction%20View.png)
+    
+    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/tablet/Tablet%20Game%20View.png)
 
 -   #### Mobile
+
+    1.  Menu View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Menu%20View.png)
+    
+    2.  Lore View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Lore%20View.png)
+    
+    3.  Instruction View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Instruction%20View.png)
+    
+    4.  Game View Wireframe - [View](https://github.com/KevAndrews/Milestone_Project_2/blob/main/wireframes/mobile/Mobile%20Game%20View.png)
 
 
 ## Surface Plane
@@ -49,12 +71,29 @@ Interactive Frontend Development Milestone Project
 
 ### Languages Used
 
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import the 'Lexend' and 'Roboto' font into the style.css file which is used on all pages throughout the project.
+2. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+3. [jQuery:](https://jquery.com/)
+    - jQuery came with Bootstrap to make the navbar responsive but was also used for the Bootstrap Modal Form.
+4. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+5. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+6. [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the [wireframes](https://github.com/KevAndrews/Milestone_Project_2/tree/main/wireframes) during the design process.
+7. [Tinypng](https://tinypng.com/) 
+    -   was used to reduce the image file sizes.
 
 ## Testing
-
+[You can find testing here!](https://github.com/KevAndrews/Milestone_Project_2/blob/main/TESTING.md)
 
 ### Bugs & Fixes
 
@@ -94,8 +133,16 @@ The GitHub Repository can be cloned in the following way:
 
 <h1>Credits</h1>
 https://freefrontend.com/css-buttons/ - https://codepen.io/sowmyaseshadri/pen/LYRjGpr
+https://free-game-assets.itch.io/free-cartoon-forest-2d-backgrounds
+https://lpc.opengameart.org/static/lpc-style-guide/assets.html#outdoors
+https://0x72.itch.io/dungeontileset-ii
+https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/
+https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/
 
 <h1>Content</h1>
 
 
 <h1>Acknowledgements</h1>
+I would like to thank the team at the Code Institute for all the courses they provided that help me gain the knowledge I needed to build this game.
+<br/><br/>
+I would also like to thank my wife Áine for her support throughout its development.

@@ -36,7 +36,12 @@ body{
 
 /* Custom Code button style */
 .btn{
-  margin: 45px auto;
+  margin: 35px auto 5px auto;
+}
+
+#audio-Controller{
+  width: 250px;
+  margin-left: 30px;
 }
 
 /* Custom Code modal style */

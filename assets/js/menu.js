@@ -1,26 +1,37 @@
 /* Custom Code */
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('button').forEach(item => {
+    item.addEventListener('click', function(){ getEvent(false, this); });
+  });
+  document.querySelectorAll('span').forEach(item => {
+    item.addEventListener('click', function(){ getEvent(true, this); });
+  });
+});
+
+function getEvent(isSpanTag, element){
   let modalName = "modal-";
-  $("button").click(function() {
-    if($(this).attr("id") != 'start'){
-      modalName += $(this).attr("id");
+  modalName += element.id;
+  if(!isSpanTag){
+    if(element.id != 'start'){
       openModal(modalName);
     } else{
       window.location.href = "game.html";
     } 
-  });
+  } else{
+    closeModal(element.parentElement.parentElement.parentElement.id);
+  }
+  
+}
 
-  $("span").click(function() {
-      closeModal(modalName);
-      modalName = "modal-";
-  });
-});
-
-/* Used JQuery_Method_Chaining___Challenge_1 as a template */
+/* Code to add and remove classes: https://www.w3schools.com/jsref/prop_element_classlist.asp */
 function openModal(modalId){
-  $("#" + modalId).removeClass("hide-modal").addClass("display-modal");
+  let element = document.getElementById(modalId);
+  element.classList.remove("hide-modal");
+  element.classList.add("display-modal");
 }
 
 function closeModal(modalId){
-  $("#" + modalId).removeClass("display-modal").addClass("hide-modal");
+  let element = document.getElementById(modalId);
+  element.classList.remove("display-modal");
+  element.classList.add("hide-modal");
 }
