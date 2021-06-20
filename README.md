@@ -4,27 +4,41 @@ The scope for this project is to create a game using JavaScript and jQuery to de
 Labyrinth Of Memoria is a Tile-based click adventure game where players need to navigate simple puzzles and collect letters to spell out the names of animals.
 <br/><br/>
 
-![Responsive displays](assets/images/responsive.png)
+![Responsive displays](images/responsive.png)
 
 ## User Experience (UX)
 
 -   ### User stories
 
     -   #### First Time Visitor Goals
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the game.
+        2. As a First Time Visitor, I want to be able to easily navigate throughout the site and to contact the developer for more information.
+        3. As a First Time Visitor, I want to be able to find out how the game works.
+        3. As a First Time Visitor, I want to be able to easily find the story / lore of the game.
 
     -   #### Returning Visitor Goals
-
-    -   #### Frequent User Goals
+        1. As a Returning Visitor, I want to find and play the game.
+        2. As a Returning Visitor, I want to find the best / easiest way to get in contact with the delevoper.
 
 <h1>Design</h1>
 
 ## Strategy Plane
+Labyrinth Of Memoria aims to provide players with a quick, easy and fun learning game to help users spell the names of animals.
+
+The objective of this project is to give the user the ability to navigate the DOM of a site using jQuery and JavaScript.
 
 ## Scope Plane
+This project will look to provide an interactive web based game.
+
+The website will convey the developers use of jQuery and JavaScript to navigate the DOM of a website.
 
 ## Structure Plane
+As the aim of the site is to provide an interactive web based game to the users the site was developed to be a linear multi-page site. The User has access to navigation in the center of the home page and the botton of the game page on the website.
+
+It was also planned to have to have the game accessible on mobile.
 
 ## Skeleton Plane
+From the structure above I was able to generate the below Wireframes for the site, while these wireframes are guidelines for building the main structure of the site the layout of the content is subject to change.
 
 
 ### Wireframes
@@ -64,10 +78,26 @@ Labyrinth Of Memoria is a Tile-based click adventure game where players need to 
 
 -   ### Design
     -   #### Colour Scheme
+        The colour scheme I used for the site were taken from the Irish flag I deicided to used this colour scheme to give the site a different look from other school site, the Hex values I used are:
+
+        -   #169B62 - For Green
+        -   #f3f3ee - For White
+        -   #FF883E - For Orange
+
+        These values were taken from [schemecolor](https://www.schemecolor.com/ireland-flag-colors.php). I deicided to use a different white so it would be easier on the eyes.
 
     -   #### Typography
+        -   I deicided on using Google Fonts Lexend and Roboto throughout the site to have a clean and clear font face.
 
     -   #### Imagery
+        -   The UI graphics were from the following [Humble Bundle](https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/), I used the btn_bg, menu_title_bg, header_bg and game_menu.
+        -   The game tiles and character graphics were from the following [itch.io](https://0x72.itch.io/dungeontileset-ii) and [Open Game Art](https://lpc.opengameart.org/static/lpc-style-guide/assets.html#outdoors), I used the player, enemy, ground_tile and end_tile from the first link and I used teh grass_tile from the second link.
+        -   The background image is from [itch.io](https://free-game-assets.itch.io/free-cartoon-forest-2d-backgrounds).
+    
+    - #### Audio
+        -   The audio for the main menu is from [Humble Bundle](https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/).
+
+    ![Reductions on images](images/tinypng.png)
 
 
 ## Features
@@ -121,7 +151,8 @@ Labyrinth Of Memoria is a Tile-based click adventure game where players need to 
 -   I wanted to add a simple player / enemy status screen in the game but ultimately decided against this as I felt it would not add must to the overall game.
 
 ### Known Issues
-
+-   The Game tiles will wrap around each other on smaller displays making movement nearly impossible.
+-   The Game status will cover up the Game tiles on smaller displays making game play impossible.
 
 <h1>Deployment</h1>
 
