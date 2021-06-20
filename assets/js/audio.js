@@ -1,6 +1,6 @@
 /* Custom Code */
 document.addEventListener('DOMContentLoaded', (event) => {
-    let bgMusic = new sound("http://127.0.0.1:5500/assets/audio/bg_music.mp3");
+    let bgMusic = new sound("https://kevandrews.github.io/Milestone_Project_2/assets/audio/bg_music.mp3");
     document.getElementById("audio-Controller").addEventListener("click", function(){ soundController(bgMusic, this); });
 });
 
