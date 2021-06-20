@@ -13,8 +13,48 @@
 ## Testing the User Experience (UX) stories
 
 -   #### First Time Visitor Goals
+    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the game.
+    ![Main purpose](images/main_menu.png)
+    By viewing the menu items you can clearly see this site is for a game and you can find the Story and Instruction on how to play the game or contact the developer.
+
+    2. As a First Time Visitor, I want to be able to easily navigate throughout the site and to contact the developer for more information.
+    ![Navigatation index.html](images/main_menu.png)
+    By using the buttons the user can clearly navigate the site and while they are on the game html the navigation can be found at the bottom of the screen.
+    ![Navigatation game.html](images/game_status.png)
+
+    3. As a First Time Visitor, I want to be able to find out how the game works.
+    ![Navigatation](images/main_menu.png)
+    By using the Instructions button the user can navigate to the Instructions modal and find out how the game works.
+    ![Instructions](images/instruction.png)
+
+    4. As a First Time Visitor, I want to be able to easily find the story / lore of the game.
+    ![Navigatation](images/main_menu.png)
+    By using the Story button the user can navigate to the Story modal and find out how the story of the game.
+    ![Instructions](images/story.png)
 
 -   #### Returning Visitor Goals
+    1. As a Returning Visitor, I want to find and play the game.
+    ![Navigatation](images/main_menu.png)
+    By using the Start Game button the user can navigate to the game html and begin the game.
+
+    2. As a Returning Visitor, I want to find the best / easiest way to get in contact with the delevoper.
+    ![Navigatation](images/main_menu.png)
+    By using the Contact Me button the user can navigate to the Contact modal and by filling in the form can send the developer a message.
+    ![Contact](images/contact_me.png)
 
 -   #### Frequent User Goals
+    1. As a Returning Visitor, I want to complete the game from start to end.
+    ![Menu](images/main_menu.png)
+    By using the Start Game button the user can start the game and complete each level until they game completed screen.
+    ![Game Completed](images/completed.png)
+
+    2. As a Returning Visitor, I want to know all the memories that are in the game.
+    ![Game Status Bar](images/game_status.png)
+    By walking into all the enmeies on screen the player can see all the memories in the game using the Memory tag in the game status bar.
+
+    3. As a Returning Visitor, I want to enable and disable sounds when needed.
+    ![Sound Control](images/play_audio.png)
+    By using the Play Music icon the user can Play or pause the music.
+
+
     

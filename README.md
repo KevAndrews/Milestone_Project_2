@@ -14,11 +14,17 @@ Labyrinth Of Memoria is a Tile-based click adventure game where players need to 
         1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the game.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site and to contact the developer for more information.
         3. As a First Time Visitor, I want to be able to find out how the game works.
-        3. As a First Time Visitor, I want to be able to easily find the story / lore of the game.
+        4. As a First Time Visitor, I want to be able to easily find the story / lore of the game.
 
     -   #### Returning Visitor Goals
         1. As a Returning Visitor, I want to find and play the game.
         2. As a Returning Visitor, I want to find the best / easiest way to get in contact with the delevoper.
+
+    -   #### Frequent User Goals
+        1. As a Returning Visitor, I want to complete the game from start to end.
+        2. As a Returning Visitor, I want to know all the memories that are in the game.
+        3. As a Returning Visitor, I want to enable and disable sounds when needed.
+        
 
 <h1>Design</h1>
 

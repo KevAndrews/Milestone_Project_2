@@ -303,7 +303,12 @@ function movePlayer(selectedDiv){
 /* Used JQuery_Method_Chaining___Challenge_1 as a template */
 function openModal(level, totalMissedMemories){
     clearInterval(refreshIntervalId);
-    $(".modal-title").text("Level " + level + " Completed");
+    if(level < 8){
+        $(".modal-title").text("Level " + level + " Completed");
+    } else{
+        $(".modal-title").text("Game Completed");
+    }
+    
     $("#modal-levelend").removeClass("hide-modal").addClass("display-modal");
     populateMadal(totalMissedMemories);
 }
