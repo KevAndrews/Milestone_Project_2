@@ -9,6 +9,7 @@ function runGame(){
     let score = 0;
     let letter = 'a';
     let totalMissedMemories = 0;
+    let sfx = new sound("http://127.0.0.1:5500/assets/audio/end_level.mp3");
 
     //Load Map/level
     loadLevel(level);
@@ -26,6 +27,8 @@ function runGame(){
 
         // Check for Enemy and increment score
         if($(this).children().hasClass("enemy-div") && movePlayer(this)){
+            sfx = new sound("http://127.0.0.1:5500/assets/audio/hit.mp3");
+            sfx.play();
             $(".game-message").removeClass("show").addClass("hide");
             letter = getMemoryLetter(level, $('.enemy-div').length);
             updateMemory(letter);
@@ -33,8 +36,10 @@ function runGame(){
         } 
         
         if(movePlayer(this)){
+            sfx = new sound("http://127.0.0.1:5500/assets/audio/end_level.mp3");
             $(".game-message").removeClass("show").addClass("hide");
             if($(this).hasClass("end-div") && level < 8){
+                sfx.play();
                 clearInterval(refreshIntervalId);
                 $("#game-btn").text("Next Level");
                 totalMissedMemories += $('.enemy-div').length;
@@ -42,11 +47,14 @@ function runGame(){
                 score = incrementScore(0, true);
                 level = endLevel(level);
             } else if($(this).hasClass("end-div") && level >= 8){
+                sfx.play();
                 clearInterval(refreshIntervalId);
                 $("#game-btn").text("Main Menu");
                 score = incrementScore(0, true);
                 openModal(level, totalMissedMemories);
             } else{
+                sfx = new sound("http://127.0.0.1:5500/assets/audio/walk.mp3");
+                sfx.play();
                 incrementScore(1, false);
             }
         } else{
@@ -330,5 +338,20 @@ function populateMadal(totalMissedMemories){
     $("#current-level").text($("#level").text());
     $("#remaining-time").text($("#time").text());
     $("#current-score").text($("#score").text());
+}
+
+/* Code from https://www.w3schools.com/graphics/game_sound.asp */ 
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    this.sound.volume = 0.2;
+    this.sound.loop = false;
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    };
 }
 /* End Game / Button Functions */
