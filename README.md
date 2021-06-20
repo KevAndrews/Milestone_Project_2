@@ -1,5 +1,10 @@
-# Milestone_Project_2
-Interactive Frontend Development Milestone Project
+<h1 align="center">Labyrinth Of Memoria</h1> 
+The scope for this project is to create a game using JavaScript and jQuery to demonstrate knowledge of DOM navigation.
+<br/><br/>
+Labyrinth Of Memoria is a Tile-based click adventure game where players need to navigate simple puzzles and collect letters to spell out the names of animals.
+<br/><br/>
+
+![Responsive displays](images/responsive.png)
 
 ## User Experience (UX)
 
@@ -78,17 +83,17 @@ Interactive Frontend Development Milestone Project
 ### Frameworks, Libraries & Programs Used
 
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Lexend' and 'Roboto' font into the style.css file which is used on all pages throughout the project.
+    - Google fonts were used to import the 'MedievalSharp' and 'Oswald' font into the style.css file which is used on all pages throughout the project.
 2. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+    - Font Awesome was used on all pages throughout the website to add icons for the audio player.
 3. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the Bootstrap Modal Form.
+    - jQuery was used in the development of the maingame.js.
 4. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 5. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
 6. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/KevAndrews/Milestone_Project_2/tree/main/wireframes) during the design process.
+    - Balsamiq was used to create the [wireframes](https://github.com/KevAndrews/Milestone_Project_2/tree/main/Wireframes) during the design process.
 7. [Tinypng](https://tinypng.com/) 
     -   was used to reduce the image file sizes.
 
@@ -132,12 +137,13 @@ The GitHub Repository can be cloned in the following way:
 7.	Pressing Enter to create the local clone.
 
 <h1>Credits</h1>
-https://freefrontend.com/css-buttons/ - https://codepen.io/sowmyaseshadri/pen/LYRjGpr
-https://free-game-assets.itch.io/free-cartoon-forest-2d-backgrounds
-https://lpc.opengameart.org/static/lpc-style-guide/assets.html#outdoors
-https://0x72.itch.io/dungeontileset-ii
-https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/
-https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/
+
+1.	https://freefrontend.com/css-buttons/ - https://codepen.io/sowmyaseshadri/pen/LYRjGpr
+2.	https://free-game-assets.itch.io/free-cartoon-forest-2d-backgrounds
+3.	https://lpc.opengameart.org/static/lpc-style-guide/assets.html#outdoors
+4.	https://0x72.itch.io/dungeontileset-ii
+5.	https://www.gamedevmarket.net/asset/rpg-game-chiptune-soundtrack-bundle-1560/
+6.	https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/
 
 <h1>Content</h1>
 
