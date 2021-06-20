@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   document.querySelectorAll('span').forEach(item => {
     item.addEventListener('click', function(){ getEvent(true, this); });
   });
-})
+});
 
 function getEvent(isSpanTag, element){
   let modalName = "modal-";
