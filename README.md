@@ -4,7 +4,7 @@ The scope for this project is to create a game using JavaScript and jQuery to de
 Labyrinth Of Memoria is a Tile-based click adventure game where players need to navigate simple puzzles and collect letters to spell out the names of animals.
 <br/><br/>
 
-![Responsive displays](images/responsive.png)
+![Responsive displays](assets/images/responsive.png)
 
 ## User Experience (UX)
 
