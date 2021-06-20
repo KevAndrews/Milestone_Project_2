@@ -78,16 +78,10 @@ From the structure above I was able to generate the below Wireframes for the sit
 
 -   ### Design
     -   #### Colour Scheme
-        The colour scheme I used for the site were taken from the Irish flag I deicided to used this colour scheme to give the site a different look from other school site, the Hex values I used are:
-
-        -   #169B62 - For Green
-        -   #f3f3ee - For White
-        -   #FF883E - For Orange
-
-        These values were taken from [schemecolor](https://www.schemecolor.com/ireland-flag-colors.php). I deicided to use a different white so it would be easier on the eyes.
+        The colour scheme I chose for the site was based around fantasy labyrinths and mazes this meant the use of different greens, browns and greys. The text I decided to use black and white to allow for easier reading on the browns and greys.
 
     -   #### Typography
-        -   I deicided on using Google Fonts Lexend and Roboto throughout the site to have a clean and clear font face.
+        -   I deicided on using Google Fonts MedievalSharp and Oswald throughout the site to have a fantasy type font face.
 
     -   #### Imagery
         -   The UI graphics were from the following [Humble Bundle](https://www.gamedevmarket.net/asset/cute-rpg-ui-kit/), I used the btn_bg, menu_title_bg, header_bg and game_menu.
@@ -153,6 +147,9 @@ From the structure above I was able to generate the below Wireframes for the sit
 ### Known Issues
 -   The Game tiles will wrap around each other on smaller displays making movement nearly impossible.
 -   The Game status will cover up the Game tiles on smaller displays making game play impossible.
+
+<h1>Future Scope</h1>
+I would like to update this project in the future to include a mobile friendly version as well as add the RPG status elements to the game as I had originally planned.
 
 <h1>Deployment</h1>
 
