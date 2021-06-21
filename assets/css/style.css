@@ -9,7 +9,15 @@
 body{
   font-family: 'Oswald', sans-serif;
   background: url('../images/main_bg.png') no-repeat;
-  max-width: 100%;
+  min-height: 100%;
+  min-width: 1024px;
+	
+  width: 100%;
+  height: auto;
+	
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /* Custom Code Header style */

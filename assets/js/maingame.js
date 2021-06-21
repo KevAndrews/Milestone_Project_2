@@ -23,6 +23,8 @@ function runGame(){
         // Display message if the player is on the selected tile
         if($(this).children().hasClass("player-div")){
             $(".game-message").html("You are on the current tile").removeClass("hide").addClass("show");
+        } else if($(this).hasClass("grass-div")){
+            $(".game-message").html("You cannot move here").removeClass("hide").addClass("show");
         }
 
         // Check for Enemy and increment score
@@ -58,7 +60,7 @@ function runGame(){
                 incrementScore(1, false);
             }
         } else{
-            
+
         } 
     });
     
