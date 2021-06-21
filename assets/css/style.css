@@ -75,8 +75,9 @@ body{
 
 .w3-container{
   background: url('../images/menu_title_bg.png') no-repeat center center;
+  background-size: 100% 100%;
   height: 560px;
-  width: 625px;
+  max-width: 625px;
 }
 
 .modal-title{
@@ -88,7 +89,7 @@ body{
 
 /* Custom code contact form style */
 .center-form{
-  width:350px;
+  max-width:350px;
   margin: 25px auto;
   font-size: 16pt;
 }
@@ -162,33 +163,6 @@ button:hover {
   transform: translateX(3px) translateY(-5px);
 }
 
-.game-container{
-  width: 100%;
-}
-
-.game-message{
-  font-family: 'MedievalSharp', cursive;
-  text-align: center;
-  padding-top: 30px;
-  color: white;
-  height: 70px;
-  background: url(../images/header_bg.png) no-repeat center;
-}
-
-.show{
-  visibility: visible;
-}
-
-.hide{
-  visibility: hidden;
-}
-
-#game-world{
-  max-width: 400px;
-  height: 450px;
-  margin: 50px auto;
-}
-
 footer{
   position: absolute;
   font-family: 'MedievalSharp', cursive;
@@ -230,6 +204,33 @@ ul li {
 }
 
 /* Custom Code for the Game layout */
+.game-container{
+  width: 100%;
+}
+
+.game-message{
+  font-family: 'MedievalSharp', cursive;
+  text-align: center;
+  padding-top: 30px;
+  color: white;
+  height: 70px;
+  background: url(../images/header_bg.png) no-repeat center;
+}
+
+.show{
+  visibility: visible;
+}
+
+.hide{
+  visibility: hidden;
+}
+
+#game-world{
+  max-width: 400px;
+  height: 450px;
+  margin: 50px auto;
+}
+
 .game-tile{
   height: 50px;
   width: 50px;
@@ -275,11 +276,34 @@ ul li {
   margin-bottom: 25px;
 }
 
-@media only screen and (max-width: 500px) {
+/* Custom Code to switch titles on smaller displays */
+@media only screen and (max-width: 600px) {
   .abbrev-title{
     display: block;
   }
+
   .main-title{
     display: none;
+  }
+
+  .story-block > p{
+    font-size: 1em;
+  }
+
+  label{
+    float:left;
+    width: 100%;
+  }
+
+  .center-form{
+    padding-left: 25px;
+  }
+
+  .center-form input[type=text],[type=email]{
+    max-width: 280px;
+  }
+  
+  .center-form textarea{
+    max-width: 280px;
   }
 }
