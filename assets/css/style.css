@@ -8,24 +8,19 @@
 
 body{
   font-family: 'Oswald', sans-serif;
-  background: url('../images/main_bg.png') no-repeat;
+  background: url('../images/main_bg.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
   background-color: #0b3727;
-  min-height: 100%;
-  min-width: 1024px;
-	
-  width: 100%;
-  height: auto;
-	
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 
 /* Custom Code Header style */
 .container{
   background: url('../images/menu_title_bg.png') no-repeat;
+  background-size: 100% 100%;
   height: 560px;
-  width: 625px;
+  max-width: 625px;
   margin: 5% auto;
 }
 
@@ -35,6 +30,10 @@ body{
   text-align: center;
   padding-top: 30px;
   color: white;
+}
+
+.abbrev-title{
+  display: none;
 }
 
 /* Custom Code nav style */
@@ -274,4 +273,13 @@ ul li {
 .end-level > p{
   font-size: 16pt;
   margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 500px) {
+  .abbrev-title{
+    display: block;
+  }
+  .main-title{
+    display: none;
+  }
 }
