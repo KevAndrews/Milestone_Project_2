@@ -206,6 +206,12 @@ ul li {
 /* Custom Code for the Game layout */
 .game-container{
   width: 100%;
+  float: left;
+}
+
+.message-container{
+  width: 100%;
+  float: left;
 }
 
 .game-message{
@@ -218,16 +224,16 @@ ul li {
 }
 
 .show{
-  visibility: visible;
+  display: block;
 }
 
 .hide{
-  visibility: hidden;
+  display: none;
 }
 
 #game-world{
   max-width: 400px;
-  height: 450px;
+  max-height: 450px;
   margin: 50px auto;
 }
 
@@ -276,8 +282,8 @@ ul li {
   margin-bottom: 25px;
 }
 
-/* Custom Code to switch titles on smaller displays */
-@media only screen and (max-width: 600px) {
+/* Custom Code to switch titles and fix Modal scaling on smaller displays */
+@media only screen and (max-width: 600px) and (min-height:365px){
   .abbrev-title{
     display: block;
   }
@@ -305,5 +311,28 @@ ul li {
   
   .center-form textarea{
     max-width: 280px;
+  }
+
+  #game-world{
+    max-width: 400px;
+    max-height: 450px;
+    margin: 0 auto;
+  }
+
+  .game-stats{
+    font-size: 1em;
+  }
+
+  .game-message{
+    margin-top: -15px;
+    background-size: 100%;
+    font-size: 1.5em;
+  }  
+}
+
+@media only screen and (max-width: 365px){
+  .game-tile{
+    height: 45px;
+    width: 45px;
   }
 }
