@@ -158,7 +158,7 @@ From the structure above I was able to generate the below Wireframes for the sit
 -   The Game status will cover up the Game tiles on smaller displays making game play impossible.
 
 <h1>Future Scope</h1>
-I would like to update this project in the future to include a mobile friendly version as well as add the RPG status elements to the game as I had originally planned.
+I would like to update this project in the future to include a mobile friendly version for horizonal screens as well as add the RPG status elements to the game as I had originally planned.
 
 <h1>Deployment</h1>
 
@@ -203,6 +203,8 @@ The GitHub Repository can be cloned in the following way:
 The audio and images belong to documented third parties noted in Credits section above, all other content was written by the developer.
 
 <h1>Acknowledgements</h1>
-I would like to thank the team at the Code Institute for all the courses they provided that help me gain the knowledge I needed to build this game.
+I would like to thank John Routledge and Emanuel Silva for helping with the Peer Review.
+<br/><br/>
+I would also like to thank the team at the Code Institute for all the courses they provided that help me gain the knowledge I needed to build this game.
 <br/><br/>
 I would also like to thank my wife Áine for her support throughout its development.
